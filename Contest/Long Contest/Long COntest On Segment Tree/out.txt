@@ -1,0 +1,9 @@
+Case 1: 3
+Case 2: 5
+Case 3: 115
+Case 4: 72
+Case 5: 11
+Case 6: 88
+Case 7: 3
+Case 8: 867197972
+Case 9: 25288141
