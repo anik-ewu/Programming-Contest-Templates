@@ -17,14 +17,10 @@ ll binomialCoeff(ll n, ll k){
     return res;
 }
 
-int main()
-{
+int main(){
     ll n, m;
 
-    while(cin>>n>>m)
-    {
-        if(n==0 and m==0)
-            break;
+    while(cin>>n>>m){
 
         ll ans=binomialCoeff(n,m);
 
