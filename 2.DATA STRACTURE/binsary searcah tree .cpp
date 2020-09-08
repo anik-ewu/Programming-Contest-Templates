@@ -24,6 +24,7 @@ struct node* search(struct node* root, int key)
 }
 
 
+
 /// A utility function to create a new BST node
 struct node *newNode(int item)
 {
