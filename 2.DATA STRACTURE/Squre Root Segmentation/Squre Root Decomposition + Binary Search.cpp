@@ -1,7 +1,7 @@
 ///Square Root Decomposition
-///Date      : 6-09-2020
-///Complexity: N*sqrt(N)
-///Find the occurrence of number in L to R which is < K
+///Date      :  6-09-2020
+///Complexity:  N*sqrt(N)
+///Challenge :  Find the occurrence of number in L to R which is < K
 
 
 #include<bits/stdc++.h>
@@ -26,7 +26,7 @@ int query(int l, int r, int v){
         }
     }
     else{
-        for(int i=l, end=(cl+1)*len-1;i<=end; ++i){
+        for(int i=l, i<(cl+1)*len; i++){
             if(arr[i]<v)cnt++;
         }
         for(int i=cl+1; i<=cr-1; i++){
@@ -58,7 +58,7 @@ int main(){
             sort(block[i].begin(),block[i].end());
         }
     }
-    ///queries
+
     ll tot, k;
     while(q--){
         cin>>l>>r>>k;
@@ -68,4 +68,3 @@ int main(){
     }
     return 0;
 }
-

@@ -9,6 +9,7 @@ using namespace std;
 struct query{
     int l,r,id;
 }q[sz];
+
 int len,mx;
 int ans[sz],arr[sz];
 int fre[sz],ffre[sz];
