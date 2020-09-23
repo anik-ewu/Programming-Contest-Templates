@@ -59,7 +59,7 @@ int main(void) {
 	g[0].pb(1);
 	g[0].pb(2);
 	g[2].pb(3);
-	g[2].pb(4);
+	g[2].pb(4);zzzz
 	dfs(0, 0, 0);
 	lca_init(5);
 	printf( "%d\n", lca_query(3,4) );

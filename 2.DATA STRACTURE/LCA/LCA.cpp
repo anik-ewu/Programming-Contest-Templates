@@ -56,8 +56,8 @@ int lca(int a, int b){
 int main(){
 
     int a,b,t, n, m;
-    cin>>n>>m;
-    for(int i=1; i<=m; i++){
+    cin>>n;
+    for(int i=0; i<n-1; i++){
         cin>>a>>b;
         adj[a].push_back(b);
         adj[b].push_back(a);
@@ -65,7 +65,9 @@ int main(){
 
     dfs(-1 , 0, 0); ///node : 0 to n-1
     init(n);
-    cout<<lca(11,14)<<endl;
+    while(cin>>a>>b){
+        cout<<lca(a,b)<<endl;
+    }
 
     return 0;
 }
