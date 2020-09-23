@@ -17,8 +17,9 @@ int fre[sz],ffre[sz];
 bool cmp(query &a, query &b){
     if(a.l/len!=b.l/len)
         return a.l/len<b.l/len;
-    return a.r<b.r;
+    return (a.l/len & 1) ? a.r<b.r : a.r>b.r;///time optimization
 }
+
 void add(int pos){
     int a=arr[pos];
     fre[a]++;
