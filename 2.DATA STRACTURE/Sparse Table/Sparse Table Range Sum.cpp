@@ -21,8 +21,9 @@ void precompute(int n){
         st[i][0] = arr[i];
 
     for (int j = 1; j <= K; j++){
-        for (int i = 0; i + (1 << j) <= n; i++)
+        for (int i = 0; i + (1 << j) <= n; i++){
             st[i][j] = (st[i][j-1]+st[i + (1 << (j - 1))][j - 1]);
+        }
     }
 }
 
@@ -44,7 +45,7 @@ int main(){
     while(t--){
         scanf("%d%d",&n,&q);
         for(i=0; i<n; i++){
-            scanf("%d",&arr[i]);
+            ///scanf("%d",&arr[i]);
         }
         precompute(n);
         printf("Case %d:\n",cs++);
