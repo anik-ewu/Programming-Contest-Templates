@@ -1,5 +1,5 @@
 ///Bridge Tree
-///Date     : 18.8.2020
+///Date: 18.8.2020
 
 #include <bits/stdc++.h>
 using namespace std;
