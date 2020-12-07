@@ -6,13 +6,15 @@
 using namespace std;
 
 typedef long long int ll;
+#define mod 1000000007
 
 ll binomialCoeff(ll n, ll k){
     ll res = 1;
     if (k>n-k)k = n - k;
     for (ll i = 0; i < k; ++i){
         res *= (n - i);
-        res /= (i + 1);
+        res=res%mod;
+        if(res)res /= (i + 1);
     }
     return res;
 }
