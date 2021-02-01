@@ -1,5 +1,5 @@
 ///Topic : Rolling Hash
-///Notes: use multiple hash for better accuracy and look for overflow too
+///Notes : use multiple hash for better accuracy and look for overflow too
 #include<bits/stdc++.h>
 using namespace std;
 #define mod 1000000007

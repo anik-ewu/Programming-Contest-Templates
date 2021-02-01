@@ -17,10 +17,6 @@ int main(){
     while(scanf("%d %d",&n,&r)==2){
         r = (r<n-r)? r : n-r;
         printf("%llu\n",nCr(n,r));
-        for(int i=1; i<=20; i++){
-            cout<<dp[i][4]<<' ';
-        }
-        cout<<endl;
     }
     return 0;
 }

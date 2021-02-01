@@ -63,6 +63,3 @@ int main () {
     }
     return 0;
 }
-///
-///Another Problem : Loj1032 - Fast Bit Calculations
-
