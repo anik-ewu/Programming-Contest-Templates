@@ -3,7 +3,7 @@ using namespace std;
 #define S 10000002
 bool mark[S+7];
 vector < int > v;
-void  seive(){
+void  sieve(){
     memset(mark,0,sizeof(mark));
     for(int i=4; i<=S; i+=2)mark[i]=1;
     for(int i=3; i*i<=S; i+=2){
@@ -20,6 +20,11 @@ void  seive(){
 }
 
 int main(){
-    seive();
+    sieve();
+
+    
+
+
+
     cout<<v.size();
 }

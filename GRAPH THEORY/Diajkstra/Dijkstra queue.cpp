@@ -45,9 +45,6 @@ int main(){
         scanf("%d%d%d",&a,&b,&c);
         adj[b].push_back(a);
         adj[a].push_back(b);
-        if(c==1)c=30;
-        if(c==2)c=20;
-        if(c==3)c=10;
         weight[a].push_back(c);
         weight[b].push_back(c);
     }
@@ -72,6 +69,5 @@ input :
 1
 output:
 Case 1:
-0 2 3 6
-0 2 3 6
+4
 */
