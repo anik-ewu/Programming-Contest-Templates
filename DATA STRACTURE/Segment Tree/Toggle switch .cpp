@@ -7,10 +7,8 @@ char  arr[size+5];
 int tree[4 * size];
 int lazy[4 * size];
 
-void build(int node , int l, int r)
-{
-    if(l==r)
-    {
+void build(int node , int l, int r){
+    if(l==r){
         tree[node]=arr[l-1]-'0';
         return ;
     }
@@ -22,8 +20,7 @@ void build(int node , int l, int r)
     build(right,mid+1,r);
 }
 
-void update( int node , int l, int r)
-{
+void update( int node , int l, int r){
     if(lazy[node])
     {
         tree[node]=(tree[node]+1)%2;

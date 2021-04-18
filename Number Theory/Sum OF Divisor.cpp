@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define S 10000002
+
+typedef long long ll;
 bool mark[S+7];
 vector < int > prime;
 void  seive()
@@ -28,11 +30,11 @@ void  seive()
     }
 }
 
-int sod(int n)
+int sod(ll n)
 {
-    int i,val,con,sum,p,s;
+    ll i,val,con,sum,p,s;
     sum=1;
-    for(i=0; prime[i]*prime[i]<=n; i++)
+    for(i=0; (prime[i]*1LL*prime[i])<=n; i++)
     {
         if(n%prime[i]==0)
         {

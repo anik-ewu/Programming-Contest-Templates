@@ -22,6 +22,8 @@ int LCM(string s, string p){
     return dp[n][m];
 }
 
+
+
 int main(){
 
     string s,p;

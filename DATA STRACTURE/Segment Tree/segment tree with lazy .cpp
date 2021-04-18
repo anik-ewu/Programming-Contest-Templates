@@ -16,12 +16,10 @@ int s,u,v,n,m,tp;
 /// at the beginning, i'th position start with the value kp[i]
 void build(int nod,int l,int r)
 {
-    if(l==r)
-    {
+    if(l==r){
         tree[nod].ar=kp[l];
         tree[nod].br=kp[l-1]-kp[l];
         lazy[nod]=0;
-        cout<<tree[nod].ar<<' '<<tree[nod].br<<endl;
         return ;
     }
 
