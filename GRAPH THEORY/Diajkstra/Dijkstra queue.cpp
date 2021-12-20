@@ -2,71 +2,70 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
-#define sz 100005
-#define inf 1e18
+const int N= 1e5;
+const ll inf=1e15;
 
-int dis[sz],cost[sz];
-vector <int>adj[sz],weight[sz];
+int dis[N];
+int par[N];
+ll cost[N];
+vector < pair< int , int > >adj[N];
 
-int diajkstra(int src){
+int diajkstra(int src, int n){
 
-    priority_queue<pair<int,int> > pq;
+   priority_queue<pair<int,int> > pq;
+   for(int i=1; i<=n; i++)
+        cost[i]=inf;
+
     pq.push(make_pair(0,src));
     cost[src]=dis[src]=0;
+    par[src]=-1;
 
     while(!pq.empty()){
         int u=pq.top().second;
         pq.pop();
-        for(int i=0; i<adj[u].size(); i++){
-            int v=adj[u][i];
-            if(cost[v]>cost[u]+weight[u][i]){
-                dis[v]=dis[u]+1;
-                cost[v]=weight[u][i]+cost[u];///relaxation
+        for(auto x: adj[u]){
+            int v=x.first;
+            int w=x.second;
+            if(cost[v]>cost[u]+w){
+                dis[v]=(dis[u]*-1)+1;
+                cost[v]=w+cost[u];///relaxation
+                par[v]=u;
                 pq.push(make_pair(dis[v]*-1,v));///to cover the nearest node first
             }
         }
     }
 }
 
-void init(int vertex){
-
-   for(int i=0; i<=vertex; i++)
-    cost[i]=inf,dis[i]=0,adj[i].clear(),weight[i].clear();
-}
-
 int main(){
 
-    int i,a,b,c,n,m,p,q;
+    int a, b, w, n, m, src;
 
-    scanf("%d%d",&n,&m);
-    init(n);///reset
-    for(i=1; i<=m; i++){
-        scanf("%d%d%d",&a,&b,&c);
-        adj[b].push_back(a);
-        adj[a].push_back(b);
-        weight[a].push_back(c);
-        weight[b].push_back(c);
+    cin>>n>>m;
+    for(int i=1; i<=m; i++){
+        cin>>a>>b>>w;
+        adj[a].push_back({b, w});
     }
-    scanf("%d",&p);
-    scanf("%d",&q);
-    diajkstra(p);///source value
-
-    printf("%d",cost[q]);
-
+    cin>>src;
+    diajkstra(src, n);
+    for(int i=1; i<=n; i++)
+        cout<<cost[i]<<endl;
 
     return 0;
 }
 
 /*
 input :
-1
-4 4
-1 2 2
-1 3 5
-2 3 1
-3 4 3
-1
+
+4 6
+0 1 1
+0 2 1
+2 3 3
+3 4 2
+3 0 6
+1 3 4
+0
 output:
 Case 1:
 4

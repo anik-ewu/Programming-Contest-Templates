@@ -8,12 +8,12 @@ int big_mod(long long int base, long long int power, long long int mod)
     {
         int p1 = base % mod;
         int p2 = (big_mod(base,power-1,mod))%mod;
-        return (p1*p2)%mod;
+        return (p1*1LL*p2)%mod;
     }
     else if(power%2==0) //power জোড় হলে
     {
         int p1 = (big_mod(base,power/2,mod))%mod;
-        return (p1*p1)%mod;
+        return (p1*1LL*p1)%mod;
     }
 }
 

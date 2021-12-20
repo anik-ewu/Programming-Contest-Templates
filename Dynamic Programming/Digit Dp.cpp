@@ -1,6 +1,5 @@
 ///judge : LOJ 1140 - How Many Zeroes?
 ///Topic : Digit DP
-///Author: Fatima Tas Neem
 
 #include<bits/stdc++.h>
 using namespace std;
